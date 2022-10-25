@@ -2,6 +2,7 @@
 import * as React from 'react';
 import Script from 'next/script';
 import { PlasmicCanvasHost, registerComponent } from '@plasmicapp/host';
+import { PLASMIC } from '../plasmic-init';
 
 // You can register any code components that you want to use here; see
 // https://docs.plasmic.app/learn/code-components-ref/
@@ -13,6 +14,6 @@ import { PlasmicCanvasHost, registerComponent } from '@plasmicapp/host';
 // registerComponent(...)
 
 export default function PlasmicHost() {
-  return <PlasmicCanvasHost />;
+  return PLASMIC &&<PlasmicCanvasHost />;
 }
     
