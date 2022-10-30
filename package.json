@@ -9,10 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.3.6",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "@plasmicapp/cli": "^0.1.186",
     "@plasmicapp/host": "^1.0.81",
     "@plasmicapp/loader-nextjs": "^1.0.190",
     "@plasmicapp/react-web": "^0.2.114",
+    "@plasmicpkgs/plasmic-chakra-ui": "^0.0.4",
+    "framer-motion": "^7.6.1",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"

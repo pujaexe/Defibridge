@@ -34,13 +34,41 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import SideBar from "../../SideBar"; // plasmic-import: O1BbL9l8IH/component
+import MenuItem from "../../MenuItem"; // plasmic-import: 7MQ4xCpNiH/component
+import Navbar from "../../Navbar"; // plasmic-import: LEgvBeEm_U/component
+import { Modal } from "@chakra-ui/react"; // plasmic-import: XqREBLaZkFt/codeComponent
+import WalletConnectContent from "../../WalletConnectContent"; // plasmic-import: aO3TpOHk3M/component
+import WalletConnectItem from "../../WalletConnectItem"; // plasmic-import: ajlQM03Cp6/component
+import { AspectRatio } from "@chakra-ui/react"; // plasmic-import: zH4zo1hKR5/codeComponent
+import { Image } from "@chakra-ui/react"; // plasmic-import: FquOBDnG2Ur/codeComponent
+import { Heading } from "@chakra-ui/react"; // plasmic-import: By0uZvvYZc/codeComponent
+import { InputGroup } from "@chakra-ui/react"; // plasmic-import: BIv71wCoGA/codeComponent
+import { InputLeftElement } from "@chakra-ui/react"; // plasmic-import: Ur16kW72uK/codeComponent
+import { Input } from "@chakra-ui/react"; // plasmic-import: kvQN243n86Q/codeComponent
+import { TableContainer } from "@chakra-ui/react"; // plasmic-import: WHvlTT2FANp/codeComponent
+import { Table } from "@chakra-ui/react"; // plasmic-import: Xh2V_4RZ6bv/codeComponent
+import { Thead } from "@chakra-ui/react"; // plasmic-import: rCQBxyBxKCy/codeComponent
+import { Tr } from "@chakra-ui/react"; // plasmic-import: JdoEUbTSAN1/codeComponent
+import { Th } from "@chakra-ui/react"; // plasmic-import: pMAj4SdGxA5/codeComponent
+import { Tbody } from "@chakra-ui/react"; // plasmic-import: ZaDc4kQf_0o/codeComponent
+import { Td } from "@chakra-ui/react"; // plasmic-import: W4px_ehgVwf/codeComponent
+
+import { useScreenVariants as useScreenVariantsstxKh81JHuQc } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: Stx-Kh81jHuQC/globalVariant
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic_defibridge.module.css"; // plasmic-import: a4bhUrqWbeGH9fzcN7EwNU/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: KqFCxnT1flhE/css
 
+import HomeFillSvgrepoComsvgIcon from "./icons/PlasmicIcon__HomeFillSvgrepoComsvg"; // plasmic-import: apLhSwR1Ut/icon
+import ImageSvgrepoComsvgIcon from "./icons/PlasmicIcon__ImageSvgrepoComsvg"; // plasmic-import: -pLceZx7Ap/icon
+import BankSvgrepoComsvgIcon from "./icons/PlasmicIcon__BankSvgrepoComsvg"; // plasmic-import: 8vPsLM-P6Z/icon
+import ProfileUserSvgrepoComsvgIcon from "./icons/PlasmicIcon__ProfileUserSvgrepoComsvg"; // plasmic-import: Figa9KsMcR/icon
+import SearchSvgrepoCom1SvgIcon from "./icons/PlasmicIcon__SearchSvgrepoCom1Svg"; // plasmic-import: jMJ7S2rEw2/icon
+
 export type PlasmicHomepage__VariantMembers = {};
+
 export type PlasmicHomepage__VariantsArgs = {};
 type VariantPropType = keyof PlasmicHomepage__VariantsArgs;
 export const PlasmicHomepage__VariantProps = new Array<VariantPropType>();
@@ -51,9 +79,20 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
-  section?: p.Flex<"section">;
-  h1?: p.Flex<"h1">;
-  text?: p.Flex<"div">;
+  sideBar?: p.Flex<typeof SideBar>;
+  navbar?: p.Flex<typeof Navbar>;
+  modal?: p.Flex<typeof Modal>;
+  walletConnectContent?: p.Flex<typeof WalletConnectContent>;
+  content?: p.Flex<"div">;
+  aspectRatio?: p.Flex<typeof AspectRatio>;
+  heading?: p.Flex<typeof Heading>;
+  inputGroup?: p.Flex<typeof InputGroup>;
+  inputLeftElement?: p.Flex<typeof InputLeftElement>;
+  input?: p.Flex<typeof Input>;
+  tableContainer?: p.Flex<typeof TableContainer>;
+  table?: p.Flex<typeof Table>;
+  thead?: p.Flex<typeof Thead>;
+  tbody?: p.Flex<typeof Tbody>;
 };
 
 export interface DefaultHomepageProps {}
@@ -68,12 +107,24 @@ function PlasmicHomepage__RenderFunc(props: {
   const { variants, overrides, forNode } = props;
 
   const $ctx = ph.useDataEnv?.() || {};
-  const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+
+        props.args
+      ),
+    [props.args]
+  );
 
   const $props = {
     ...args,
     ...variants
   };
+
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsstxKh81JHuQc()
+  });
 
   return (
     <React.Fragment>
@@ -96,58 +147,1444 @@ function PlasmicHomepage__RenderFunc(props: {
             projectcss.root_reset,
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
+            projectcss.plasmic_tokens,
             sty.root
           )}
         >
-          <p.Stack
-            as={"section"}
-            data-plasmic-name={"section"}
-            data-plasmic-override={overrides.section}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.section)}
-          >
-            <h1
-              data-plasmic-name={"h1"}
-              data-plasmic-override={overrides.h1}
-              className={classNames(
-                projectcss.all,
-                projectcss.h1,
-                projectcss.__wab_text,
-                sty.h1
-              )}
-            >
-              {"Welcome to your first page."}
-            </h1>
+          <div className={classNames(projectcss.all, sty.freeBox___8I5Zo)}>
+            {(
+              hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+            ) ? (
+              <SideBar
+                data-plasmic-name={"sideBar"}
+                data-plasmic-override={overrides.sideBar}
+                className={classNames("__wab_instance", sty.sideBar)}
+                menus={
+                  <React.Fragment>
+                    <MenuItem
+                      button={
+                        <React.Fragment>
+                          <HomeFillSvgrepoComsvgIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__uk6Ov
+                            )}
+                            role={"img"}
+                          />
 
-            <div
-              data-plasmic-name={"text"}
-              data-plasmic-override={overrides.text}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text
-              )}
-            >
-              <React.Fragment>
-                <React.Fragment>
-                  {
-                    "If you haven't already done so, go back and learn the basics by going through the Plasmic Levels tutorial.\n\nIt's always easier to start from examples! Add a new page using a template—do this from the list of pages in the top left (the gray + button).\n\nOr press the big blue + button to start dragging items into this page.\n\nIntegrate this project into your codebase—press the "
-                  }
-                </React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ fontWeight: 700 }}
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__fWwOz
+                            )}
+                          >
+                            {"Home"}
+                          </div>
+                        </React.Fragment>
+                      }
+                      className={classNames(
+                        "__wab_instance",
+                        sty.menuItem__q68Tc
+                      )}
+                      isActive={true}
+                    />
+
+                    <MenuItem
+                      button={
+                        <React.Fragment>
+                          <ImageSvgrepoComsvgIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__vBe1J
+                            )}
+                            role={"img"}
+                          />
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__h91Nc
+                            )}
+                          >
+                            {"NFTs"}
+                          </div>
+                        </React.Fragment>
+                      }
+                      className={classNames(
+                        "__wab_instance",
+                        sty.menuItem__yWngl
+                      )}
+                    />
+
+                    <MenuItem
+                      button={
+                        <React.Fragment>
+                          <BankSvgrepoComsvgIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__pchGu
+                            )}
+                            role={"img"}
+                          />
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__h91Nc
+                            )}
+                          >
+                            {"Defi"}
+                          </div>
+                        </React.Fragment>
+                      }
+                      className={classNames(
+                        "__wab_instance",
+                        sty.menuItem___9NhZg
+                      )}
+                    />
+
+                    <MenuItem
+                      button={
+                        <React.Fragment>
+                          <ProfileUserSvgrepoComsvgIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__wZvL
+                            )}
+                            role={"img"}
+                          />
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___6CXw
+                            )}
+                          >
+                            {"Profile"}
+                          </div>
+                        </React.Fragment>
+                      }
+                      className={classNames(
+                        "__wab_instance",
+                        sty.menuItem___1W1HW
+                      )}
+                    />
+                  </React.Fragment>
+                }
+              />
+            ) : null}
+
+            <div className={classNames(projectcss.all, sty.freeBox__bLkCu)}>
+              <Navbar
+                data-plasmic-name={"navbar"}
+                data-plasmic-override={overrides.navbar}
+                className={classNames("__wab_instance", sty.navbar)}
+                rightMenu={
+                  <Modal
+                    data-plasmic-name={"modal"}
+                    data-plasmic-override={overrides.modal}
+                    body={
+                      <WalletConnectContent
+                        data-plasmic-name={"walletConnectContent"}
+                        data-plasmic-override={overrides.walletConnectContent}
+                        className={classNames(
+                          "__wab_instance",
+                          sty.walletConnectContent
+                        )}
+                      />
+                    }
+                    buttonCTACaption={"Gasskeun" as const}
+                    buttonCaption={"Connect Wallet" as const}
+                    buttonCloseCaption={"Close" as const}
+                    className={classNames("__wab_instance", sty.modal)}
+                    headerText={"Available Wallets" as const}
+                  />
+                }
+              />
+
+              <p.Stack
+                as={"div"}
+                data-plasmic-name={"content"}
+                data-plasmic-override={overrides.content}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.content)}
+              >
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__rdnxw
+                  )}
+                  component={Link}
+                  platform={"nextjs"}
                 >
-                  {"Code"}
-                </span>
-                <React.Fragment>
-                  {
-                    " button in the top right and follow the quickstart instructions. 2\n\nJoin our Slack community (icon in bottom left) for help any time."
-                  }
-                </React.Fragment>
-              </React.Fragment>
+                  <AspectRatio
+                    data-plasmic-name={"aspectRatio"}
+                    data-plasmic-override={overrides.aspectRatio}
+                    className={classNames("__wab_instance", sty.aspectRatio)}
+                    ratio={4.333 as const}
+                  >
+                    <Image
+                      className={classNames("__wab_instance", sty.image__dYvHs)}
+                      fallbackSrc={"https://via.placeholder.com/150" as const}
+                      src={"https://bit.ly/naruto-sage" as const}
+                    />
+                  </AspectRatio>
+                </p.PlasmicLink>
+
+                {true ? (
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__kLoBa)}
+                  >
+                    <Heading
+                      data-plasmic-name={"heading"}
+                      data-plasmic-override={overrides.heading}
+                      className={classNames("__wab_instance", sty.heading)}
+                      noOfLines={1 as const}
+                      size={"lg" as const}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__p7Lhf
+                        )}
+                      >
+                        {"Explore DeFi Ecosystem"}
+                      </div>
+                    </Heading>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__vZnvg
+                      )}
+                    >
+                      {
+                        "DeFi listed here is not financial advice. Please do your own research"
+                      }
+                    </div>
+                  </p.Stack>
+                ) : null}
+
+                <InputGroup
+                  data-plasmic-name={"inputGroup"}
+                  data-plasmic-override={overrides.inputGroup}
+                  className={classNames("__wab_instance", sty.inputGroup)}
+                >
+                  <InputLeftElement
+                    data-plasmic-name={"inputLeftElement"}
+                    data-plasmic-override={overrides.inputLeftElement}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.inputLeftElement
+                    )}
+                  >
+                    <SearchSvgrepoCom1SvgIcon
+                      className={classNames(projectcss.all, sty.svg___8Xyn2)}
+                      role={"img"}
+                    />
+                  </InputLeftElement>
+
+                  <Input
+                    data-plasmic-name={"input"}
+                    data-plasmic-override={overrides.input}
+                    className={classNames("__wab_instance", sty.input)}
+                    errorBorderColor={"red.500" as const}
+                    focusBorderColor={"blue.500" as const}
+                    placeholder={"Search" as const}
+                    variant={"outline" as const}
+                  />
+                </InputGroup>
+
+                <TableContainer
+                  data-plasmic-name={"tableContainer"}
+                  data-plasmic-override={overrides.tableContainer}
+                  className={classNames("__wab_instance", sty.tableContainer)}
+                >
+                  <Table
+                    data-plasmic-name={"table"}
+                    data-plasmic-override={overrides.table}
+                    className={classNames("__wab_instance", sty.table)}
+                    colorScheme={"gray" as const}
+                    size={"md" as const}
+                    variant={"simple" as const}
+                  >
+                    <Thead
+                      data-plasmic-name={"thead"}
+                      data-plasmic-override={overrides.thead}
+                      className={classNames("__wab_instance", sty.thead)}
+                    >
+                      <Tr
+                        className={classNames("__wab_instance", sty.tr__ff1CX)}
+                      >
+                        <Th
+                          className={classNames(
+                            "__wab_instance",
+                            sty.th__jyNtk
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__tiMtV
+                            )}
+                          >
+                            {"Name"}
+                          </div>
+                        </Th>
+
+                        <Th
+                          className={classNames(
+                            "__wab_instance",
+                            sty.th___8R2Ln
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__jotxf
+                            )}
+                          >
+                            {"Network"}
+                          </div>
+                        </Th>
+
+                        {(
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? true
+                            : true
+                        ) ? (
+                          <Th
+                            className={classNames(
+                              "__wab_instance",
+                              sty.th__tme0Y
+                            )}
+                            isNumeric={true}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__wpL9
+                              )}
+                            >
+                              {"User Deposit"}
+                            </div>
+                          </Th>
+                        ) : null}
+
+                        <Th
+                          className={classNames(
+                            "__wab_instance",
+                            sty.th___3Opk
+                          )}
+                          isNumeric={true}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__oWgfD
+                            )}
+                          >
+                            {"TIV"}
+                          </div>
+                        </Th>
+                      </Tr>
+                    </Thead>
+
+                    <Tbody
+                      data-plasmic-name={"tbody"}
+                      data-plasmic-override={overrides.tbody}
+                      className={classNames("__wab_instance", sty.tbody)}
+                    >
+                      <Tr
+                        className={classNames("__wab_instance", sty.tr__cLaav)}
+                      >
+                        <Td
+                          className={classNames(
+                            "__wab_instance",
+                            sty.td__lfzyg
+                          )}
+                        >
+                          {true ? (
+                            <p.PlasmicLink
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.a,
+                                sty.link__aex3J
+                              )}
+                              component={Link}
+                              platform={"nextjs"}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img__m2Trf)}
+                                displayHeight={"auto" as const}
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"24px" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: "/plasmic/defibridge/images/aaveV2Png.png",
+                                  fullWidth: 250,
+                                  fullHeight: 250,
+                                  aspectRatio: undefined
+                                }}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__fQ0Hz
+                                )}
+                              >
+                                {"inches"}
+                              </div>
+                            </p.PlasmicLink>
+                          ) : null}
+                        </Td>
+
+                        <Td
+                          className={classNames(
+                            "__wab_instance",
+                            sty.td__gydVm
+                          )}
+                        >
+                          {true ? (
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__jc1Hz
+                              )}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img___7F5Za)}
+                                displayHeight={"auto" as const}
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"24px" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: "/plasmic/defibridge/images/ethereumIconpng.png",
+                                  fullWidth: 50,
+                                  fullHeight: 50,
+                                  aspectRatio: undefined
+                                }}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__zsdf0
+                                )}
+                              >
+                                {"Ethreum"}
+                              </div>
+                            </div>
+                          ) : null}
+                        </Td>
+
+                        {(
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? true
+                            : true
+                        ) ? (
+                          <Td
+                            className={classNames(
+                              "__wab_instance",
+                              sty.td__hxRo1
+                            )}
+                            isNumeric={true}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___5VFkQ
+                              )}
+                            >
+                              {"$17B"}
+                            </div>
+                          </Td>
+                        ) : null}
+
+                        <Td
+                          className={classNames("__wab_instance", sty.td__eeSe)}
+                          isNumeric={true}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__zAcx
+                            )}
+                          >
+                            {"$8B"}
+                          </div>
+                        </Td>
+                      </Tr>
+
+                      <Tr
+                        className={classNames("__wab_instance", sty.tr___0Bbmn)}
+                      >
+                        <Td
+                          className={classNames(
+                            "__wab_instance",
+                            sty.td__iQaqp
+                          )}
+                        >
+                          {true ? (
+                            <p.PlasmicLink
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.a,
+                                sty.link__qHknm
+                              )}
+                              component={Link}
+                              platform={"nextjs"}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img___6O0Cb)}
+                                displayHeight={"auto" as const}
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"24px" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: "/plasmic/defibridge/images/aaveV2Png.png",
+                                  fullWidth: 250,
+                                  fullHeight: 250,
+                                  aspectRatio: undefined
+                                }}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__vyJxE
+                                )}
+                              >
+                                {"inches"}
+                              </div>
+                            </p.PlasmicLink>
+                          ) : null}
+                        </Td>
+
+                        <Td
+                          className={classNames(
+                            "__wab_instance",
+                            sty.td__gydVm
+                          )}
+                        >
+                          {true ? (
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox___7Ej1E
+                              )}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img__skDeA)}
+                                displayHeight={"auto" as const}
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"24px" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: "/plasmic/defibridge/images/ethereumIconpng.png",
+                                  fullWidth: 50,
+                                  fullHeight: 50,
+                                  aspectRatio: undefined
+                                }}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__pEraa
+                                )}
+                              >
+                                {"Ethreum"}
+                              </div>
+                            </div>
+                          ) : null}
+                        </Td>
+
+                        {(
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? true
+                            : true
+                        ) ? (
+                          <Td
+                            className={classNames(
+                              "__wab_instance",
+                              sty.td__hxRo1
+                            )}
+                            isNumeric={true}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__kiPS
+                              )}
+                            >
+                              {"$17B"}
+                            </div>
+                          </Td>
+                        ) : null}
+
+                        <Td
+                          className={classNames("__wab_instance", sty.td__eeSe)}
+                          isNumeric={true}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__lQy2G
+                            )}
+                          >
+                            {"$8B"}
+                          </div>
+                        </Td>
+                      </Tr>
+
+                      <Tr
+                        className={classNames("__wab_instance", sty.tr__cpXOu)}
+                      >
+                        <Td
+                          className={classNames(
+                            "__wab_instance",
+                            sty.td__ieNha
+                          )}
+                        >
+                          {true ? (
+                            <p.PlasmicLink
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.a,
+                                sty.link__yJb1M
+                              )}
+                              component={Link}
+                              platform={"nextjs"}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img___14Yb2)}
+                                displayHeight={"auto" as const}
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"24px" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: "/plasmic/defibridge/images/aaveV2Png.png",
+                                  fullWidth: 250,
+                                  fullHeight: 250,
+                                  aspectRatio: undefined
+                                }}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__cyKui
+                                )}
+                              >
+                                {"inches"}
+                              </div>
+                            </p.PlasmicLink>
+                          ) : null}
+                        </Td>
+
+                        <Td
+                          className={classNames(
+                            "__wab_instance",
+                            sty.td__gydVm
+                          )}
+                        >
+                          {true ? (
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__ivj1P
+                              )}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img__wMnf9)}
+                                displayHeight={"auto" as const}
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"24px" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: "/plasmic/defibridge/images/ethereumIconpng.png",
+                                  fullWidth: 50,
+                                  fullHeight: 50,
+                                  aspectRatio: undefined
+                                }}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__av6M
+                                )}
+                              >
+                                {"Ethreum"}
+                              </div>
+                            </div>
+                          ) : null}
+                        </Td>
+
+                        {(
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? true
+                            : true
+                        ) ? (
+                          <Td
+                            className={classNames(
+                              "__wab_instance",
+                              sty.td__hxRo1
+                            )}
+                            isNumeric={true}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___0T1GX
+                              )}
+                            >
+                              {"$17B"}
+                            </div>
+                          </Td>
+                        ) : null}
+
+                        <Td
+                          className={classNames("__wab_instance", sty.td__eeSe)}
+                          isNumeric={true}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__dW2B
+                            )}
+                          >
+                            {"$8B"}
+                          </div>
+                        </Td>
+                      </Tr>
+
+                      <Tr
+                        className={classNames("__wab_instance", sty.tr__faMKw)}
+                      >
+                        <Td
+                          className={classNames(
+                            "__wab_instance",
+                            sty.td__arR2B
+                          )}
+                        >
+                          {true ? (
+                            <p.PlasmicLink
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.a,
+                                sty.link___69C3L
+                              )}
+                              component={Link}
+                              platform={"nextjs"}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img___4Uab)}
+                                displayHeight={"auto" as const}
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"24px" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: "/plasmic/defibridge/images/aaveV2Png.png",
+                                  fullWidth: 250,
+                                  fullHeight: 250,
+                                  aspectRatio: undefined
+                                }}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__vyWqx
+                                )}
+                              >
+                                {"inches"}
+                              </div>
+                            </p.PlasmicLink>
+                          ) : null}
+                        </Td>
+
+                        <Td
+                          className={classNames(
+                            "__wab_instance",
+                            sty.td__gydVm
+                          )}
+                        >
+                          {true ? (
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__fh1XV
+                              )}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img__rFZgs)}
+                                displayHeight={"auto" as const}
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"24px" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: "/plasmic/defibridge/images/ethereumIconpng.png",
+                                  fullWidth: 50,
+                                  fullHeight: 50,
+                                  aspectRatio: undefined
+                                }}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__nd6SU
+                                )}
+                              >
+                                {"Ethreum"}
+                              </div>
+                            </div>
+                          ) : null}
+                        </Td>
+
+                        {(
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? true
+                            : true
+                        ) ? (
+                          <Td
+                            className={classNames(
+                              "__wab_instance",
+                              sty.td__hxRo1
+                            )}
+                            isNumeric={true}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___3Wn6
+                              )}
+                            >
+                              {"$17B"}
+                            </div>
+                          </Td>
+                        ) : null}
+
+                        <Td
+                          className={classNames("__wab_instance", sty.td__eeSe)}
+                          isNumeric={true}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__oGhLc
+                            )}
+                          >
+                            {"$8B"}
+                          </div>
+                        </Td>
+                      </Tr>
+
+                      <Tr
+                        className={classNames("__wab_instance", sty.tr__rmipg)}
+                      >
+                        <Td
+                          className={classNames(
+                            "__wab_instance",
+                            sty.td___8E11
+                          )}
+                        >
+                          {true ? (
+                            <p.PlasmicLink
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.a,
+                                sty.link__kxHhD
+                              )}
+                              component={Link}
+                              platform={"nextjs"}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img___55K3P)}
+                                displayHeight={"auto" as const}
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"24px" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: "/plasmic/defibridge/images/aaveV2Png.png",
+                                  fullWidth: 250,
+                                  fullHeight: 250,
+                                  aspectRatio: undefined
+                                }}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__b2UIr
+                                )}
+                              >
+                                {"inches"}
+                              </div>
+                            </p.PlasmicLink>
+                          ) : null}
+                        </Td>
+
+                        <Td
+                          className={classNames(
+                            "__wab_instance",
+                            sty.td__gydVm
+                          )}
+                        >
+                          {true ? (
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__yr7SC
+                              )}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img__eOiTm)}
+                                displayHeight={"auto" as const}
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"24px" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: "/plasmic/defibridge/images/ethereumIconpng.png",
+                                  fullWidth: 50,
+                                  fullHeight: 50,
+                                  aspectRatio: undefined
+                                }}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__yyuAv
+                                )}
+                              >
+                                {"Ethreum"}
+                              </div>
+                            </div>
+                          ) : null}
+                        </Td>
+
+                        {(
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? true
+                            : true
+                        ) ? (
+                          <Td
+                            className={classNames(
+                              "__wab_instance",
+                              sty.td__hxRo1
+                            )}
+                            isNumeric={true}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___0F4Ao
+                              )}
+                            >
+                              {"$17B"}
+                            </div>
+                          </Td>
+                        ) : null}
+
+                        <Td
+                          className={classNames("__wab_instance", sty.td__eeSe)}
+                          isNumeric={true}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__yr1Ks
+                            )}
+                          >
+                            {"$8B"}
+                          </div>
+                        </Td>
+                      </Tr>
+
+                      <Tr
+                        className={classNames("__wab_instance", sty.tr__juBlp)}
+                      >
+                        <Td
+                          className={classNames(
+                            "__wab_instance",
+                            sty.td__gHuOi
+                          )}
+                        >
+                          {true ? (
+                            <p.PlasmicLink
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.a,
+                                sty.link__xO2Gr
+                              )}
+                              component={Link}
+                              platform={"nextjs"}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img__byRa)}
+                                displayHeight={"auto" as const}
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"24px" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: "/plasmic/defibridge/images/aaveV2Png.png",
+                                  fullWidth: 250,
+                                  fullHeight: 250,
+                                  aspectRatio: undefined
+                                }}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__yfhZ
+                                )}
+                              >
+                                {"inches"}
+                              </div>
+                            </p.PlasmicLink>
+                          ) : null}
+                        </Td>
+
+                        <Td
+                          className={classNames(
+                            "__wab_instance",
+                            sty.td__gydVm
+                          )}
+                        >
+                          {true ? (
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__cRpkg
+                              )}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img__mUz2M)}
+                                displayHeight={"auto" as const}
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"24px" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: "/plasmic/defibridge/images/ethereumIconpng.png",
+                                  fullWidth: 50,
+                                  fullHeight: 50,
+                                  aspectRatio: undefined
+                                }}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text___7KTfm
+                                )}
+                              >
+                                {"Ethreum"}
+                              </div>
+                            </div>
+                          ) : null}
+                        </Td>
+
+                        {(
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? true
+                            : true
+                        ) ? (
+                          <Td
+                            className={classNames(
+                              "__wab_instance",
+                              sty.td__hxRo1
+                            )}
+                            isNumeric={true}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text___5AMd
+                              )}
+                            >
+                              {"$17B"}
+                            </div>
+                          </Td>
+                        ) : null}
+
+                        <Td
+                          className={classNames("__wab_instance", sty.td__eeSe)}
+                          isNumeric={true}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__kRxIx
+                            )}
+                          >
+                            {"$8B"}
+                          </div>
+                        </Td>
+                      </Tr>
+
+                      <Tr
+                        className={classNames("__wab_instance", sty.tr__gdWzv)}
+                      >
+                        <Td
+                          className={classNames(
+                            "__wab_instance",
+                            sty.td___494Jt
+                          )}
+                        >
+                          {true ? (
+                            <p.PlasmicLink
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.a,
+                                sty.link__uOzVp
+                              )}
+                              component={Link}
+                              platform={"nextjs"}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img__qzI8X)}
+                                displayHeight={"auto" as const}
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"24px" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: "/plasmic/defibridge/images/aaveV2Png.png",
+                                  fullWidth: 250,
+                                  fullHeight: 250,
+                                  aspectRatio: undefined
+                                }}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__hhrSw
+                                )}
+                              >
+                                {"inches"}
+                              </div>
+                            </p.PlasmicLink>
+                          ) : null}
+                        </Td>
+
+                        <Td
+                          className={classNames(
+                            "__wab_instance",
+                            sty.td__gydVm
+                          )}
+                        >
+                          {true ? (
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__sGybo
+                              )}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img__lKtdQ)}
+                                displayHeight={"auto" as const}
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"24px" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: "/plasmic/defibridge/images/ethereumIconpng.png",
+                                  fullWidth: 50,
+                                  fullHeight: 50,
+                                  aspectRatio: undefined
+                                }}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__lJcvw
+                                )}
+                              >
+                                {"Ethreum"}
+                              </div>
+                            </div>
+                          ) : null}
+                        </Td>
+
+                        {(
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? true
+                            : true
+                        ) ? (
+                          <Td
+                            className={classNames(
+                              "__wab_instance",
+                              sty.td__hxRo1
+                            )}
+                            isNumeric={true}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__wKplM
+                              )}
+                            >
+                              {"$17B"}
+                            </div>
+                          </Td>
+                        ) : null}
+
+                        <Td
+                          className={classNames("__wab_instance", sty.td__eeSe)}
+                          isNumeric={true}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___1Iscb
+                            )}
+                          >
+                            {"$8B"}
+                          </div>
+                        </Td>
+                      </Tr>
+
+                      <Tr
+                        className={classNames("__wab_instance", sty.tr__hVs1A)}
+                      >
+                        <Td
+                          className={classNames(
+                            "__wab_instance",
+                            sty.td__wtOex
+                          )}
+                        >
+                          {true ? (
+                            <p.PlasmicLink
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.a,
+                                sty.link__buUHw
+                              )}
+                              component={Link}
+                              platform={"nextjs"}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img__cdpak)}
+                                displayHeight={"auto" as const}
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"24px" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: "/plasmic/defibridge/images/aaveV2Png.png",
+                                  fullWidth: 250,
+                                  fullHeight: 250,
+                                  aspectRatio: undefined
+                                }}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text___0Ihw
+                                )}
+                              >
+                                {"inches"}
+                              </div>
+                            </p.PlasmicLink>
+                          ) : null}
+                        </Td>
+
+                        <Td
+                          className={classNames(
+                            "__wab_instance",
+                            sty.td__gydVm
+                          )}
+                        >
+                          {true ? (
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__h2Ejx
+                              )}
+                            >
+                              <p.PlasmicImg
+                                alt={""}
+                                className={classNames(sty.img__g9Ac2)}
+                                displayHeight={"auto" as const}
+                                displayMaxHeight={"none" as const}
+                                displayMaxWidth={"100%" as const}
+                                displayMinHeight={"0" as const}
+                                displayMinWidth={"0" as const}
+                                displayWidth={"24px" as const}
+                                loading={"lazy" as const}
+                                src={{
+                                  src: "/plasmic/defibridge/images/ethereumIconpng.png",
+                                  fullWidth: 50,
+                                  fullHeight: 50,
+                                  aspectRatio: undefined
+                                }}
+                              />
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__tE4AI
+                                )}
+                              >
+                                {"Ethreum"}
+                              </div>
+                            </div>
+                          ) : null}
+                        </Td>
+
+                        {(
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? true
+                            : true
+                        ) ? (
+                          <Td
+                            className={classNames(
+                              "__wab_instance",
+                              sty.td__hxRo1
+                            )}
+                            isNumeric={true}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__s9DvW
+                              )}
+                            >
+                              {"$17B"}
+                            </div>
+                          </Td>
+                        ) : null}
+
+                        <Td
+                          className={classNames("__wab_instance", sty.td__eeSe)}
+                          isNumeric={true}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__wIGz
+                            )}
+                          >
+                            {"$8B"}
+                          </div>
+                        </Td>
+                      </Tr>
+                    </Tbody>
+                  </Table>
+                </TableContainer>
+              </p.Stack>
             </div>
-          </p.Stack>
+          </div>
         </div>
       </div>
     </React.Fragment>
@@ -155,19 +1592,68 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "h1", "text"],
-  section: ["section", "h1", "text"],
-  h1: ["h1"],
-  text: ["text"]
+  root: [
+    "root",
+    "sideBar",
+    "navbar",
+    "modal",
+    "walletConnectContent",
+    "content",
+    "aspectRatio",
+    "heading",
+    "inputGroup",
+    "inputLeftElement",
+    "input",
+    "tableContainer",
+    "table",
+    "thead",
+    "tbody"
+  ],
+  sideBar: ["sideBar"],
+  navbar: ["navbar", "modal", "walletConnectContent"],
+  modal: ["modal", "walletConnectContent"],
+  walletConnectContent: ["walletConnectContent"],
+  content: [
+    "content",
+    "aspectRatio",
+    "heading",
+    "inputGroup",
+    "inputLeftElement",
+    "input",
+    "tableContainer",
+    "table",
+    "thead",
+    "tbody"
+  ],
+  aspectRatio: ["aspectRatio"],
+  heading: ["heading"],
+  inputGroup: ["inputGroup", "inputLeftElement", "input"],
+  inputLeftElement: ["inputLeftElement"],
+  input: ["input"],
+  tableContainer: ["tableContainer", "table", "thead", "tbody"],
+  table: ["table", "thead", "tbody"],
+  thead: ["thead"],
+  tbody: ["tbody"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  section: "section";
-  h1: "h1";
-  text: "div";
+  sideBar: typeof SideBar;
+  navbar: typeof Navbar;
+  modal: typeof Modal;
+  walletConnectContent: typeof WalletConnectContent;
+  content: "div";
+  aspectRatio: typeof AspectRatio;
+  heading: typeof Heading;
+  inputGroup: typeof InputGroup;
+  inputLeftElement: typeof InputLeftElement;
+  input: typeof Input;
+  tableContainer: typeof TableContainer;
+  table: typeof Table;
+  thead: typeof Thead;
+  tbody: typeof Tbody;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -231,9 +1717,20 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    section: makeNodeComponent("section"),
-    h1: makeNodeComponent("h1"),
-    text: makeNodeComponent("text"),
+    sideBar: makeNodeComponent("sideBar"),
+    navbar: makeNodeComponent("navbar"),
+    modal: makeNodeComponent("modal"),
+    walletConnectContent: makeNodeComponent("walletConnectContent"),
+    content: makeNodeComponent("content"),
+    aspectRatio: makeNodeComponent("aspectRatio"),
+    heading: makeNodeComponent("heading"),
+    inputGroup: makeNodeComponent("inputGroup"),
+    inputLeftElement: makeNodeComponent("inputLeftElement"),
+    input: makeNodeComponent("input"),
+    tableContainer: makeNodeComponent("tableContainer"),
+    table: makeNodeComponent("table"),
+    thead: makeNodeComponent("thead"),
+    tbody: makeNodeComponent("tbody"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

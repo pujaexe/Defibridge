@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -40,12 +40,211 @@
           "cssFilePath": "plasmic/defibridge/PlasmicHomepage.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "O1BbL9l8IH",
+          "name": "SideBar",
+          "type": "managed",
+          "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+          "renderModuleFilePath": "plasmic/defibridge/PlasmicSideBar.tsx",
+          "importSpec": {
+            "modulePath": "SideBar.tsx"
+          },
+          "cssFilePath": "plasmic/defibridge/PlasmicSideBar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "7MQ4xCpNiH",
+          "name": "MenuItem",
+          "type": "managed",
+          "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+          "renderModuleFilePath": "plasmic/defibridge/PlasmicMenuItem.tsx",
+          "importSpec": {
+            "modulePath": "MenuItem.tsx"
+          },
+          "cssFilePath": "plasmic/defibridge/PlasmicMenuItem.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "LEgvBeEm_U",
+          "name": "Navbar",
+          "type": "managed",
+          "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+          "renderModuleFilePath": "plasmic/defibridge/PlasmicNavbar.tsx",
+          "importSpec": {
+            "modulePath": "Navbar.tsx"
+          },
+          "cssFilePath": "plasmic/defibridge/PlasmicNavbar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "ajlQM03Cp6",
+          "name": "WalletConnectItem",
+          "type": "managed",
+          "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+          "renderModuleFilePath": "plasmic/defibridge/PlasmicWalletConnectItem.tsx",
+          "importSpec": {
+            "modulePath": "WalletConnectItem.tsx"
+          },
+          "cssFilePath": "plasmic/defibridge/PlasmicWalletConnectItem.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "aO3TpOHk3M",
+          "name": "WalletConnectContent",
+          "type": "managed",
+          "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+          "renderModuleFilePath": "plasmic/defibridge/PlasmicWalletConnectContent.tsx",
+          "importSpec": {
+            "modulePath": "WalletConnectContent.tsx"
+          },
+          "cssFilePath": "plasmic/defibridge/PlasmicWalletConnectContent.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "wfQfo5hy_L",
+          "name": "Profile",
+          "type": "managed",
+          "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+          "renderModuleFilePath": "plasmic/defibridge/PlasmicProfile.tsx",
+          "importSpec": {
+            "modulePath": "../pages/profile.tsx"
+          },
+          "cssFilePath": "plasmic/defibridge/PlasmicProfile.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "RJzPsvPN81",
+          "name": "NavbarWallet",
+          "type": "managed",
+          "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+          "renderModuleFilePath": "plasmic/defibridge/PlasmicNavbarWallet.tsx",
+          "importSpec": {
+            "modulePath": "NavbarWallet.tsx"
+          },
+          "cssFilePath": "plasmic/defibridge/PlasmicNavbarWallet.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "BmAeYsXCwH",
+          "name": "AssetContainer",
+          "type": "managed",
+          "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+          "renderModuleFilePath": "plasmic/defibridge/PlasmicAssetContainer.tsx",
+          "importSpec": {
+            "modulePath": "AssetContainer.tsx"
+          },
+          "cssFilePath": "plasmic/defibridge/PlasmicAssetContainer.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "_3xOiX4pKP",
+          "name": "AssetItems",
+          "type": "managed",
+          "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+          "renderModuleFilePath": "plasmic/defibridge/PlasmicAssetItems.tsx",
+          "importSpec": {
+            "modulePath": "AssetItems.tsx"
+          },
+          "cssFilePath": "plasmic/defibridge/PlasmicAssetItems.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
-      "icons": [],
-      "images": [],
+      "icons": [
+        {
+          "id": "irfeuZAX5P",
+          "name": "TwitterSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/defibridge/icons/PlasmicIcon__TwitterSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "Xh6I6gBAVB",
+          "name": "FacebookSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/defibridge/icons/PlasmicIcon__FacebookSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "jMJ7S2rEw2",
+          "name": "SearchSvgrepoCom1SvgIcon",
+          "moduleFilePath": "plasmic/defibridge/icons/PlasmicIcon__SearchSvgrepoCom1Svg.tsx"
+        },
+        {
+          "id": "apLhSwR1Ut",
+          "name": "HomeFillSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/defibridge/icons/PlasmicIcon__HomeFillSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "-pLceZx7Ap",
+          "name": "ImageSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/defibridge/icons/PlasmicIcon__ImageSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "8vPsLM-P6Z",
+          "name": "BankSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/defibridge/icons/PlasmicIcon__BankSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "Figa9KsMcR",
+          "name": "ProfileUserSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/defibridge/icons/PlasmicIcon__ProfileUserSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "pjXsPF_9F9",
+          "name": "WalletSvgrepoCom1SvgIcon",
+          "moduleFilePath": "plasmic/defibridge/icons/PlasmicIcon__WalletSvgrepoCom1Svg.tsx"
+        },
+        {
+          "id": "rpbvt0S2XD",
+          "name": "NextSvgrepoCom1SvgIcon",
+          "moduleFilePath": "plasmic/defibridge/icons/PlasmicIcon__NextSvgrepoCom1Svg.tsx"
+        }
+      ],
+      "images": [
+        {
+          "id": "rNqMR2ie5",
+          "name": "twitter-svgrepo-com.svg 2",
+          "filePath": "../public/plasmic/defibridge/images/twitterSvgrepoComsvg2.svg"
+        },
+        {
+          "id": "XiW_RpDuO",
+          "name": "aave-v2.png",
+          "filePath": "../public/plasmic/defibridge/images/aaveV2Png.png"
+        },
+        {
+          "id": "9zmPbrKUm",
+          "name": "ethereum-icon.png",
+          "filePath": "../public/plasmic/defibridge/images/ethereumIconpng.png"
+        },
+        {
+          "id": "b8Ylo1Kd9",
+          "name": "MetaMask_Fox.svg.png",
+          "filePath": "../public/plasmic/defibridge/images/metaMaskFoxsvgpng.png"
+        },
+        {
+          "id": "twWErnEBY",
+          "name": "coinbase-coin-logo-C86F46D7B8-seeklogo.com.png",
+          "filePath": "../public/plasmic/defibridge/images/coinbaseCoinLogoC86F46D7B8Seeklogocompng.png"
+        },
+        {
+          "id": "BQrjGjbaZ",
+          "name": "walletconnect-logo-EE83B50C97-seeklogo.com.png",
+          "filePath": "../public/plasmic/defibridge/images/walletconnectLogoEe83B50C97Seeklogocompng.png"
+        },
+        {
+          "id": "igMAAUEfyP",
+          "name": "Wallet.svg",
+          "filePath": "../public/plasmic/defibridge/images/walletsvg.svg"
+        }
+      ],
       "indirect": false,
-      "globalContextsFilePath": "",
+      "globalContextsFilePath": "plasmic/defibridge/PlasmicGlobalContextsProvider.tsx",
       "codeComponents": [
         {
           "id": "yGpx_bBs3i",
@@ -56,6 +255,386 @@
           "id": "waDHopgLh3",
           "name": "Fetcher",
           "componentImportPath": "@plasmicapp/data-sources"
+        },
+        {
+          "id": "47GjrDxVya",
+          "name": "Button",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "VrpoR7uUlq",
+          "name": "ButtonGroup",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "zH4zo1hKR5",
+          "name": "AspectRatio",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "vtEQOJpqK3",
+          "name": "Badge",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "cHvn04dKqS",
+          "name": "BreadcrumbItem",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "7WZGy-dh42l",
+          "name": "BreadcrumbLink",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "x6wejTdrQMx",
+          "name": "Breadcrumb",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "l8qNRDWSILW",
+          "name": "BreadcrumbSeparator",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "khFattiTAO7",
+          "name": "Checkbox",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "BexaHRxtNU6",
+          "name": "CheckboxGroup",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "atFFFO_koxJ",
+          "name": "Code",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "XbkTrGWYipv",
+          "name": "Divider",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "FquOBDnG2Ur",
+          "name": "Image",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "kvQN243n86Q",
+          "name": "Input",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "QNFxjZ6ax4b",
+          "name": "Kbd",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "3nydgL2LzfF",
+          "name": "NumberDecrementStepper",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "t8ulHH6njK_",
+          "name": "NumberIncrementStepper",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "JXpUXf119CS",
+          "name": "NumberInput",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "quyPiIZvvGN",
+          "name": "NumberInputField",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "of6cAA01cmg",
+          "name": "NumberInputStepper",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "4ZarvCGKa5P",
+          "name": "PinInput",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "vep7kd3a9uM",
+          "name": "PinInputField",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "fYsgzI7zhDd",
+          "name": "Popover",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "9GCEmNMyeIr",
+          "name": "PopoverArrow",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "q0Ehg1Nalzy",
+          "name": "PopoverBody",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "hEqjCUiFGP5",
+          "name": "PopoverCloseButton",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "O93PlU7geRw",
+          "name": "PopoverContent",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "fvsoBA2kYHv",
+          "name": "PopoverHeader",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "sSloxrgR2FA",
+          "name": "PopoverTrigger",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "6wSoXCpxA51",
+          "name": "Radio",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "w6oVwg-VKO3",
+          "name": "RadioGroup",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "KNMKa727fQ6",
+          "name": "Option",
+          "componentImportPath": "./option"
+        },
+        {
+          "id": "Y_n0AQynSOt",
+          "name": "Select",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "ET3XvI5NqdE",
+          "name": "Stat",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "Vj3mfn_UtB9",
+          "name": "StatArrow",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "YaL6R2dn6Jd",
+          "name": "StatHelpText",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "r3HeLOQ33vd",
+          "name": "StatLabel",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "6MFAC9_grJe",
+          "name": "StatNumber",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "6H65VNhYt1W",
+          "name": "Switch",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "Xh2V_4RZ6bv",
+          "name": "Table",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "6d3w-cqthDL",
+          "name": "TableCaption",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "WHvlTT2FANp",
+          "name": "TableContainer",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "ZaDc4kQf_0o",
+          "name": "Tbody",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "W4px_ehgVwf",
+          "name": "Td",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "pMAj4SdGxA5",
+          "name": "Th",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "rCQBxyBxKCy",
+          "name": "Thead",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "JdoEUbTSAN1",
+          "name": "Tr",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "bvaFli-7E50",
+          "name": "Tab",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "MIw0CVAJwic",
+          "name": "TabList",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "pEGFtGPuU4n",
+          "name": "TabPanel",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "4ourokTCVsg",
+          "name": "TabPanels",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "OeoXU1rRope",
+          "name": "Tabs",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "01l8jBH51yN",
+          "name": "Text",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "aZ8dYeTJbL",
+          "name": "Acordion",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "Sg_E8yCjPR",
+          "name": "AccordionItem",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "eGg_bS9LTv",
+          "name": "AccordionButton",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "9V5TJzRpdU",
+          "name": "AccordionPanel",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "1tuasUNMlR",
+          "name": "AccordionIcon",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "SNJRDQ3EZG",
+          "name": "AvatarBadge",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "kpaNHoMO6b",
+          "name": "Avatar",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "TsLyHzwbJV",
+          "name": "AvatarGroup",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "CUJnt3s53I",
+          "name": "FormControl",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "23-3MswHRC",
+          "name": "FormLabel",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "P7C8WaTSxH",
+          "name": "FormHelperText",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "nx45-nxrUl",
+          "name": "FormErrorMessage",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "By0uZvvYZc",
+          "name": "Heading",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "_pi8BVRjISg",
+          "name": "Highlight",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "HLPm2qNVdQh",
+          "name": "Progress",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "e-W7Asc3HB-",
+          "name": "Toast",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "NbEVaqwsUD7",
+          "name": "Tooltip",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "XqREBLaZkFt",
+          "name": "Modal",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "FlI9iG1YAgn",
+          "name": "ChakraProvider",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "Lq7Pc0MLKa",
+          "name": "IconButton",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "RnQ6bfZ0jD",
+          "name": "DrawerButtonIcon",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "BIv71wCoGA",
+          "name": "InputGroup",
+          "componentImportPath": "@chakra-ui/react"
+        },
+        {
+          "id": "Ur16kW72uK",
+          "name": "InputLeftElement",
+          "componentImportPath": "@chakra-ui/react"
         }
       ]
     }

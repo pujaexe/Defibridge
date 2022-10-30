@@ -1,5 +1,126 @@
 {
-  "props": [],
+  "props": [
+    {
+      "name": "Black",
+      "type": "color",
+      "value": "#151515",
+      "category": "color",
+      "meta": {
+        "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+        "id": "KmhSbTMIG"
+      }
+    },
+    {
+      "name": "Black2",
+      "type": "color",
+      "value": "#212121",
+      "category": "color",
+      "meta": {
+        "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+        "id": "h7bPPLdez"
+      }
+    },
+    {
+      "name": "Blue",
+      "type": "color",
+      "value": "#2149E6",
+      "category": "color",
+      "meta": {
+        "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+        "id": "MMHOkAFJC"
+      }
+    },
+    {
+      "name": "Dark",
+      "type": "color",
+      "value": "#A0A0A0",
+      "category": "color",
+      "meta": {
+        "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+        "id": "PtVaz3HWv"
+      }
+    },
+    {
+      "name": "Dark Grey",
+      "type": "color",
+      "value": "#5D5D5D",
+      "category": "color",
+      "meta": {
+        "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+        "id": "Hl-9jXrqY"
+      }
+    },
+    {
+      "name": "Green",
+      "type": "color",
+      "value": "#00C39A",
+      "category": "color",
+      "meta": {
+        "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+        "id": "z1n1S0Zom"
+      }
+    },
+    {
+      "name": "Light Grey",
+      "type": "color",
+      "value": "#F6F6F6",
+      "category": "color",
+      "meta": {
+        "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+        "id": "PEO1hEkZR"
+      }
+    },
+    {
+      "name": "Orange",
+      "type": "color",
+      "value": "#DD5634",
+      "category": "color",
+      "meta": {
+        "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+        "id": "LxX9aAxDA"
+      }
+    },
+    {
+      "name": "Primarry Color",
+      "type": "color",
+      "value": "#E4005A",
+      "category": "color",
+      "meta": {
+        "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+        "id": "xV__GkSLA"
+      }
+    },
+    {
+      "name": "Purple",
+      "type": "color",
+      "value": "#785CEA",
+      "category": "color",
+      "meta": {
+        "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+        "id": "dMIpDNSnS"
+      }
+    },
+    {
+      "name": "White",
+      "type": "color",
+      "value": "#FBFBFB",
+      "category": "color",
+      "meta": {
+        "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+        "id": "CxAlfCIQE"
+      }
+    },
+    {
+      "name": "Yellow",
+      "type": "color",
+      "value": "#FFD155",
+      "category": "color",
+      "meta": {
+        "projectId": "a4bhUrqWbeGH9fzcN7EwNU",
+        "id": "AykQsJJjm"
+      }
+    }
+  ],
   "global": {
     "meta": {
       "source": "plasmic.app"
